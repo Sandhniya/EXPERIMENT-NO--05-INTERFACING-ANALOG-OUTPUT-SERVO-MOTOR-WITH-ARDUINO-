@@ -1,8 +1,8 @@
-###  DATE: 
+###  DATE: 15.03.24
 
-###  NAME: 
-###  ROLL NO :
-###  DEPARTMENT: 
+###  NAME:B.SANDHIYA SREE 
+###  ROLL NO :212223220093
+###  DEPARTMENT: INFORMATION TECHNOLOGY
 
 
 # EXPERIMENT NO 05 INTERFACING ANALOG OUTPUT SERVO MOTOR WITH ARDUINO
@@ -74,6 +74,47 @@ CIRCUIT DIAGRAM
 
 
 ### PROGRAM :
+```
+#include <Servo.h>
+
+Servo myServo;
+
+  int pos =0;
+void setup()
+{
+  myServo.attach(9);
+  Serial.begin(9600);
+}
+
+void loop()
+{
+    for (pos=0;pos<=180;pos+=1)
+    {myServo.write(pos);
+    delay(20);
+    //Serial.print("Angel=");
+    Serial.println(pos);
+     //delay(500);
+  }
+  
+  {
+   for(pos=180;pos>0;pos-=1) 
+   {myServo.write(pos);
+    delay(20);
+    //Serial.print("Angle=");
+    Serial.println(pos);
+      //delay(500);
+  }
+} 
+}
+```
+OUTPUT:
+![Screenshot 2024-03-15 210624](https://github.com/Sandhniya/EXPERIMENT-NO--05-INTERFACING-ANALOG-OUTPUT-SERVO-MOTOR-WITH-ARDUINO-/assets/151395890/af607764-f9c0-4070-9735-2df2becbe3f0)
+I![Screenshot 2024-03-15 210630](https://github.com/Sandhniya/EXPERIMENT-NO--05-INTERFACING-ANALOG-OUTPUT-SERVO-MOTOR-WITH-ARDUINO-/assets/151395890/d11e8e79-1eb6-4788-b641-f73a4ca5cd12)
+
+![Screenshot 2024-03-15 210637](https://github.com/Sandhniya/EXPERIMENT-NO--05-INTERFACING-ANALOG-OUTPUT-SERVO-MOTOR-WITH-ARDUINO-/assets/151395890/99296f5e-dc21-4ab7-880e-a0d468a58e26)
+
+
+
  
 
 
